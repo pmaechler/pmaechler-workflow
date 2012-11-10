@@ -22,6 +22,13 @@ class Title {
 	 */
 	protected $name;
 
+	/**
+	 * The entries
+	 * @var \Doctrine\Common\Collections\Collection<\Pmaechler\Workflow\Domain\Model\Customer>
+	 * @ORM\OneToMany(mappedBy="title",cascade="persist")
+	 */
+	protected $customers;
+
 
 	/**
 	 * Get the Title's name

@@ -19,6 +19,7 @@ class Customer {
 	/**
 	 * The title
 	 * @var \Pmaechler\Workflow\Domain\Model\Title
+	 * @ORM\ManyToOne(inversedBy="customers")
 	 */
 	protected $title;
 
