@@ -1,0 +1,33 @@
+<f:layout name="Default" />
+
+<f:section name="Title">Edit step "{step.name}"</f:section>
+
+<f:section name="Content">
+	<f:form action="update" object="{step}" name="step">
+		<ol>
+			<li>
+				<label for="name">Name</label>
+				<f:form.textfield property="name" id="name" />
+			</li>
+		
+			<li>
+				<label for="order">Order</label>
+				<f:form.textfield property="order" id="order" />
+			</li>
+		
+			<li>
+				<label for="stepGroup">Step group</label>
+				<f:form.textfield property="stepGroup" id="stepGroup" />
+			</li>
+		
+			<li>
+				<label for="historyEntries">History entries</label>
+				<f:form.textfield property="historyEntries" id="historyEntries" />
+			</li>
+		
+			<li>
+				<f:form.submit value="Update"/>
+			</li>
+		</ol>
+	</f:form>
+</f:section>

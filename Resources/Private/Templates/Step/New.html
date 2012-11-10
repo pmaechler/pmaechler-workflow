@@ -1,0 +1,35 @@
+<f:layout name="Default" />
+
+<f:section name="Title">New step</f:section>
+
+<f:section name="Content">
+	<p>Just fill out the following form to create a new step:</p>
+
+	<f:form action="create" name="newStep">
+		<ol>
+			<li>
+				<label for="name">Name</label>
+				<f:form.textfield property="name" id="name" />
+			</li>
+		
+			<li>
+				<label for="order">Order</label>
+				<f:form.textfield property="order" id="order" />
+			</li>
+		
+			<li>
+				<label for="stepGroup">Step group</label>
+				<f:form.textfield property="stepGroup" id="stepGroup" />
+			</li>
+		
+			<li>
+				<label for="historyEntries">History entries</label>
+				<f:form.textfield property="historyEntries" id="historyEntries" />
+			</li>
+		
+			<li>
+				<f:form.submit value="Create" />
+			</li>
+		</ol>
+	</f:form>
+</f:section>
