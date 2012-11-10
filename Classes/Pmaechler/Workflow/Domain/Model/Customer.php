@@ -120,6 +120,13 @@ class Customer {
 	 */
 	protected $securityHash;
 
+	/**
+	 * The history entries
+	 * @var \Doctrine\Common\Collections\Collection<\Pmaechler\Workflow\Domain\Model\History>
+	 * @ORM\OneToMany(mappedBy="customer",cascade="persist")
+	 */
+	protected $historyEntries;
+
 
 	/**
 	 * Get the Customer's title
