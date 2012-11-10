@@ -28,6 +28,13 @@ class Quote {
 	 */
 	protected $price;
 
+	/**
+	 * The entries
+	 * @var \Doctrine\Common\Collections\Collection<\Pmaechler\Workflow\Domain\Model\Customer>
+	 * @ORM\OneToMany(mappedBy="title",cascade="persist")
+	 */
+	protected $customers;
+
 
 	/**
 	 * Get the Quote's name

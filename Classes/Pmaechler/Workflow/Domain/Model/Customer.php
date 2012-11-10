@@ -74,6 +74,7 @@ class Customer {
 	/**
 	 * The quote
 	 * @var \Pmaechler\Workflow\Domain\Model\Quote
+	 * @ORM\ManyToOne(inversedBy="customers")
 	 */
 	protected $quote;
 
