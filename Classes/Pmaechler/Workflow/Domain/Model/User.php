@@ -43,6 +43,7 @@ class User {
 	/**
 	 * The role
 	 * @var \Pmaechler\Workflow\Domain\Model\Role
+	 * @ORM\ManyToOne(inversedBy="users")
 	 */
 	protected $role;
 

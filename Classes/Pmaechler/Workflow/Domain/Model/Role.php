@@ -22,6 +22,13 @@ class Role {
 	 */
 	protected $name;
 
+	/**
+	 * The users
+	 * @var \Doctrine\Common\Collections\Collection<\Pmaechler\Workflow\Domain\Model\User>
+	 * @ORM\OneToMany(mappedBy="role",cascade="persist")
+	 */
+	protected $users;
+
 
 	/**
 	 * Get the Role's name
