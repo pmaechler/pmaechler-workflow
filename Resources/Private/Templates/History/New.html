@@ -1,0 +1,35 @@
+<f:layout name="Default" />
+
+<f:section name="Title">New history</f:section>
+
+<f:section name="Content">
+	<p>Just fill out the following form to create a new history:</p>
+
+	<f:form action="create" name="newHistory">
+		<ol>
+			<li>
+				<label for="customer">Customer</label>
+				<f:form.textfield property="customer" id="customer" />
+			</li>
+		
+			<li>
+				<label for="user">User</label>
+				<f:form.textfield property="user" id="user" />
+			</li>
+		
+			<li>
+				<label for="step">Step</label>
+				<f:form.textfield property="step" id="step" />
+			</li>
+		
+			<li>
+				<label for="timestamp">Timestamp</label>
+				<f:form.textfield type="datetime" value="{f:format.date(date: 'now', format: 'Y-m-d\TH:i:sP')}" property="timestamp" id="timestamp" />
+			</li>
+		
+			<li>
+				<f:form.submit value="Create" />
+			</li>
+		</ol>
+	</f:form>
+</f:section>

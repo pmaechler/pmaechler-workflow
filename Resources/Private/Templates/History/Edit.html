@@ -1,0 +1,33 @@
+<f:layout name="Default" />
+
+<f:section name="Title">Edit history "{history.name}"</f:section>
+
+<f:section name="Content">
+	<f:form action="update" object="{history}" name="history">
+		<ol>
+			<li>
+				<label for="customer">Customer</label>
+				<f:form.textfield property="customer" id="customer" />
+			</li>
+		
+			<li>
+				<label for="user">User</label>
+				<f:form.textfield property="user" id="user" />
+			</li>
+		
+			<li>
+				<label for="step">Step</label>
+				<f:form.textfield property="step" id="step" />
+			</li>
+		
+			<li>
+				<label for="timestamp">Timestamp</label>
+				<f:form.textfield type="datetime" value="{history.timestamp -> f:format.date(format: 'Y-m-d\TH:i:sP')}" property="timestamp" id="timestamp" />
+			</li>
+		
+			<li>
+				<f:form.submit value="Update"/>
+			</li>
+		</ol>
+	</f:form>
+</f:section>
