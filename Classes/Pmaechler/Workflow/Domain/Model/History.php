@@ -33,6 +33,7 @@ class History {
 	/**
 	 * The step
 	 * @var \Pmaechler\Workflow\Domain\Model\Step
+	 * @ORM\ManyToOne(inversedBy="historyEntries")
 	 */
 	protected $step;
 

@@ -35,6 +35,13 @@ class Step {
 	 */
 	protected $stepGroup;
 
+	/**
+	 * The history entries
+	 * @var \Doctrine\Common\Collections\Collection<\Pmaechler\Workflow\Domain\Model\History>
+	 * @ORM\OneToMany(mappedBy="user",cascade="persist")
+	 */
+	protected $historyEntries;
+
 
 	/**
 	 * Get the Step's name
