@@ -28,6 +28,12 @@ class Step {
 	 */
 	protected $order;
 
+	/**
+	 * The step group
+	 * @var \Pmaechler\Workflow\Domain\Model\StepGroup
+	 */
+	protected $stepGroup;
+
 
 	/**
 	 * Get the Step's name
@@ -65,6 +71,25 @@ class Step {
 	 */
 	public function setOrder($order) {
 		$this->order = $order;
+	}
+
+	/**
+	 * Get the Step's step group
+	 *
+	 * @return \Pmaechler\Workflow\Domain\Model\StepGroup The Step's step group
+	 */
+	public function getStepGroup() {
+		return $this->stepGroup;
+	}
+
+	/**
+	 * Sets this Step's step group
+	 *
+	 * @param \Pmaechler\Workflow\Domain\Model\StepGroup $stepGroup The Step's step group
+	 * @return void
+	 */
+	public function setStepGroup($stepGroup) {
+		$this->stepGroup = $stepGroup;
 	}
 
 }
