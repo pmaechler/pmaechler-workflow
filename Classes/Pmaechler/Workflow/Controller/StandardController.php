@@ -22,7 +22,7 @@ class StandardController extends ActionController {
 	 * @return void
 	 */
 	public function indexAction() {
-		$this->view->assign('categories', $this->categoryRepository->findAll());
+
 	}
 }
 ?>
