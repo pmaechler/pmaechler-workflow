@@ -24,7 +24,7 @@ class EmailText {
 
 	/**
 	 * The body
-	 * @var text
+	 * @var string
 	 */
 	protected $body;
 
