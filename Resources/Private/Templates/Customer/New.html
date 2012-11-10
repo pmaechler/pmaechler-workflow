@@ -1,0 +1,105 @@
+<f:layout name="Default" />
+
+<f:section name="Title">New customer</f:section>
+
+<f:section name="Content">
+	<p>Just fill out the following form to create a new customer:</p>
+
+	<f:form action="create" name="newCustomer">
+		<ol>
+			<li>
+				<label for="title">Title</label>
+				<f:form.textfield property="title" id="title" />
+			</li>
+		
+			<li>
+				<label for="firstname">Firstname</label>
+				<f:form.textfield property="firstname" id="firstname" />
+			</li>
+		
+			<li>
+				<label for="lastname">Lastname</label>
+				<f:form.textfield property="lastname" id="lastname" />
+			</li>
+		
+			<li>
+				<label for="company">Company</label>
+				<f:form.textfield property="company" id="company" />
+			</li>
+		
+			<li>
+				<label for="address">Address</label>
+				<f:form.textfield property="address" id="address" />
+			</li>
+		
+			<li>
+				<label for="zip">Zip</label>
+				<f:form.textfield property="zip" id="zip" />
+			</li>
+		
+			<li>
+				<label for="city">City</label>
+				<f:form.textfield property="city" id="city" />
+			</li>
+		
+			<li>
+				<label for="email">Email</label>
+				<f:form.textfield property="email" id="email" />
+			</li>
+		
+			<li>
+				<label for="phone">Phone</label>
+				<f:form.textfield property="phone" id="phone" />
+			</li>
+		
+			<li>
+				<label for="quote">Quote</label>
+				<f:form.textfield property="quote" id="quote" />
+			</li>
+		
+			<li>
+				<label for="domain">Domain</label>
+				<f:form.textfield property="domain" id="domain" />
+			</li>
+		
+			<li>
+				<label for="ftpUsername">Ftp username</label>
+				<f:form.textfield property="ftpUsername" id="ftpUsername" />
+			</li>
+		
+			<li>
+				<label for="ftpPassword">Ftp password</label>
+				<f:form.textfield property="ftpPassword" id="ftpPassword" />
+			</li>
+		
+			<li>
+				<label for="pleskUsername">Plesk username</label>
+				<f:form.textfield property="pleskUsername" id="pleskUsername" />
+			</li>
+		
+			<li>
+				<label for="pleskPassword">Plesk password</label>
+				<f:form.textfield property="pleskPassword" id="pleskPassword" />
+			</li>
+		
+			<li>
+				<label for="status">Status</label>
+				<f:form.textfield property="status" id="status" />
+			</li>
+		
+			<li>
+				<label for="securityHash">Security hash</label>
+				<f:form.textfield property="securityHash" id="securityHash" />
+			</li>
+		
+			<li>
+				<label for="historyEntries">History entries</label>
+				<f:form.textfield property="historyEntries" id="historyEntries" />
+			</li>
+		
+			<li>
+				<f:form.submit value="Create" />
+			</li>
+		</ol>
+	</f:form>
+</f:section>
