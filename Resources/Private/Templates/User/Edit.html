@@ -1,0 +1,43 @@
+<f:layout name="Default" />
+
+<f:section name="Title">Edit user "{user.name}"</f:section>
+
+<f:section name="Content">
+	<f:form action="update" object="{user}" name="user">
+		<ol>
+			<li>
+				<label for="lastname">Lastname</label>
+				<f:form.textfield property="lastname" id="lastname" />
+			</li>
+		
+			<li>
+				<label for="firstname">Firstname</label>
+				<f:form.textfield property="firstname" id="firstname" />
+			</li>
+		
+			<li>
+				<label for="username">Username</label>
+				<f:form.textfield property="username" id="username" />
+			</li>
+		
+			<li>
+				<label for="password">Password</label>
+				<f:form.textfield property="password" id="password" />
+			</li>
+		
+			<li>
+				<label for="role">Role</label>
+				<f:form.textfield property="role" id="role" />
+			</li>
+		
+			<li>
+				<label for="historyEntries">History entries</label>
+				<f:form.textfield property="historyEntries" id="historyEntries" />
+			</li>
+		
+			<li>
+				<f:form.submit value="Update"/>
+			</li>
+		</ol>
+	</f:form>
+</f:section>

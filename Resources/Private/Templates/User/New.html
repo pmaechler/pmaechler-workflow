@@ -1,0 +1,45 @@
+<f:layout name="Default" />
+
+<f:section name="Title">New user</f:section>
+
+<f:section name="Content">
+	<p>Just fill out the following form to create a new user:</p>
+
+	<f:form action="create" name="newUser">
+		<ol>
+			<li>
+				<label for="lastname">Lastname</label>
+				<f:form.textfield property="lastname" id="lastname" />
+			</li>
+		
+			<li>
+				<label for="firstname">Firstname</label>
+				<f:form.textfield property="firstname" id="firstname" />
+			</li>
+		
+			<li>
+				<label for="username">Username</label>
+				<f:form.textfield property="username" id="username" />
+			</li>
+		
+			<li>
+				<label for="password">Password</label>
+				<f:form.textfield property="password" id="password" />
+			</li>
+		
+			<li>
+				<label for="role">Role</label>
+				<f:form.textfield property="role" id="role" />
+			</li>
+		
+			<li>
+				<label for="historyEntries">History entries</label>
+				<f:form.textfield property="historyEntries" id="historyEntries" />
+			</li>
+		
+			<li>
+				<f:form.submit value="Create" />
+			</li>
+		</ol>
+	</f:form>
+</f:section>
