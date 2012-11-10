@@ -22,6 +22,13 @@ class StepGroup {
 	 */
 	protected $name;
 
+	/**
+	 * The entries
+	 * @var \Doctrine\Common\Collections\Collection<\Pmaechler\Workflow\Domain\Model\Step>
+	 * @ORM\OneToMany(mappedBy="stepGroup",cascade="persist")
+	 */
+	protected $steps;
+
 
 	/**
 	 * Get the Step group's name

@@ -31,6 +31,7 @@ class Step {
 	/**
 	 * The step group
 	 * @var \Pmaechler\Workflow\Domain\Model\StepGroup
+	 * @ORM\ManyToOne(inversedBy="steps")
 	 */
 	protected $stepGroup;
 
