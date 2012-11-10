@@ -15,7 +15,7 @@ use TYPO3\Flow\Mvc\Controller\ActionController;
  *
  * @Flow\Scope("singleton")
  */
-class StandardController extends ActionController {
+class StandardController extends BaseController {
 	/**
 	 * Index action
 	 *

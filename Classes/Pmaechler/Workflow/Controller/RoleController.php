@@ -12,11 +12,11 @@ use TYPO3\Flow\Mvc\Controller\ActionController;
 use \Pmaechler\Workflow\Domain\Model\Role;
 
 /**
- * Role controller for the Pmaechler.Workflow package 
+ * Role controller for the Pmaechler.Workflow package
  *
  * @Flow\Scope("singleton")
  */
-class RoleController extends ActionController {
+class RoleController extends BaseController {
 
 	/**
 	 * @Flow\Inject

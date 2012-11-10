@@ -12,11 +12,11 @@ use TYPO3\Flow\Mvc\Controller\ActionController;
 use \Pmaechler\Workflow\Domain\Model\Customer;
 
 /**
- * Customer controller for the Pmaechler.Workflow package 
+ * Customer controller for the Pmaechler.Workflow package
  *
  * @Flow\Scope("singleton")
  */
-class CustomerController extends ActionController {
+class CustomerController extends BaseController {
 
 	/**
 	 * @Flow\Inject

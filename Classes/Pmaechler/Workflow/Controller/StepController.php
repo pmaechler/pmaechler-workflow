@@ -12,11 +12,11 @@ use TYPO3\Flow\Mvc\Controller\ActionController;
 use \Pmaechler\Workflow\Domain\Model\Step;
 
 /**
- * Step controller for the Pmaechler.Workflow package 
+ * Step controller for the Pmaechler.Workflow package
  *
  * @Flow\Scope("singleton")
  */
-class StepController extends ActionController {
+class StepController extends BaseController {
 
 	/**
 	 * @Flow\Inject

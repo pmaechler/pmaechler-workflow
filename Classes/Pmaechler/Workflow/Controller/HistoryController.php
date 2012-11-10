@@ -12,11 +12,11 @@ use TYPO3\Flow\Mvc\Controller\ActionController;
 use \Pmaechler\Workflow\Domain\Model\History;
 
 /**
- * History controller for the Pmaechler.Workflow package 
+ * History controller for the Pmaechler.Workflow package
  *
  * @Flow\Scope("singleton")
  */
-class HistoryController extends ActionController {
+class HistoryController extends BaseController {
 
 	/**
 	 * @Flow\Inject

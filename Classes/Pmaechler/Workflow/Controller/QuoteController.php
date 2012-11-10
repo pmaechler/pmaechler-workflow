@@ -12,11 +12,11 @@ use TYPO3\Flow\Mvc\Controller\ActionController;
 use \Pmaechler\Workflow\Domain\Model\Quote;
 
 /**
- * Quote controller for the Pmaechler.Workflow package 
+ * Quote controller for the Pmaechler.Workflow package
  *
  * @Flow\Scope("singleton")
  */
-class QuoteController extends ActionController {
+class QuoteController extends BaseController {
 
 	/**
 	 * @Flow\Inject

@@ -12,11 +12,11 @@ use TYPO3\Flow\Mvc\Controller\ActionController;
 use \Pmaechler\Workflow\Domain\Model\Title;
 
 /**
- * Title controller for the Pmaechler.Workflow package 
+ * Title controller for the Pmaechler.Workflow package
  *
  * @Flow\Scope("singleton")
  */
-class TitleController extends ActionController {
+class TitleController extends BaseController {
 
 	/**
 	 * @Flow\Inject

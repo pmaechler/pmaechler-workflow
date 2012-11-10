@@ -12,11 +12,11 @@ use TYPO3\Flow\Mvc\Controller\ActionController;
 use \Pmaechler\Workflow\Domain\Model\EmailText;
 
 /**
- * EmailText controller for the Pmaechler.Workflow package 
+ * EmailText controller for the Pmaechler.Workflow package
  *
  * @Flow\Scope("singleton")
  */
-class EmailTextController extends ActionController {
+class EmailTextController extends BaseController {
 
 	/**
 	 * @Flow\Inject
