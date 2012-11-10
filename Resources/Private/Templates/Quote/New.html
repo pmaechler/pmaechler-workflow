@@ -1,0 +1,30 @@
+<f:layout name="Default" />
+
+<f:section name="Title">New quote</f:section>
+
+<f:section name="Content">
+	<p>Just fill out the following form to create a new quote:</p>
+
+	<f:form action="create" name="newQuote">
+		<ol>
+			<li>
+				<label for="name">Name</label>
+				<f:form.textfield property="name" id="name" />
+			</li>
+		
+			<li>
+				<label for="price">Price</label>
+				<f:form.textfield property="price" id="price" />
+			</li>
+		
+			<li>
+				<label for="customers">Customers</label>
+				<f:form.textfield property="customers" id="customers" />
+			</li>
+		
+			<li>
+				<f:form.submit value="Create" />
+			</li>
+		</ol>
+	</f:form>
+</f:section>

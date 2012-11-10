@@ -1,0 +1,28 @@
+<f:layout name="Default" />
+
+<f:section name="Title">Edit quote "{quote.name}"</f:section>
+
+<f:section name="Content">
+	<f:form action="update" object="{quote}" name="quote">
+		<ol>
+			<li>
+				<label for="name">Name</label>
+				<f:form.textfield property="name" id="name" />
+			</li>
+		
+			<li>
+				<label for="price">Price</label>
+				<f:form.textfield property="price" id="price" />
+			</li>
+		
+			<li>
+				<label for="customers">Customers</label>
+				<f:form.textfield property="customers" id="customers" />
+			</li>
+		
+			<li>
+				<f:form.submit value="Update"/>
+			</li>
+		</ol>
+	</f:form>
+</f:section>
