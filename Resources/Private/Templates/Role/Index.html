@@ -1,0 +1,23 @@
+<f:layout name="Default" />
+
+<f:section name="Title">A list of roles</f:section>
+
+<f:section name="Content">
+	<f:if condition="{roles}">
+		<f:then>
+			<ul>
+				<f:for each="{roles}" as="role">
+					<li>
+						<f:link.action action="show" arguments="{role: role}">{role.name}</f:link.action>
+						<f:link.action action="edit" arguments="{role: role}">Edit</f:link.action>
+						<f:link.action action="delete" arguments="{role: role}">Delete</f:link.action>
+					</li>
+				</f:for>
+			</ul>
+		</f:then>
+		<f:else>
+			<p>No roles created yet.</p>
+		</f:else>
+	</f:if>
+	<p><f:link.action action="new">Create a new role</f:link.action></p>
+</f:section>
