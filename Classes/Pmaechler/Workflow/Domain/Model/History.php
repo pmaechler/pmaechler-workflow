@@ -26,6 +26,7 @@ class History {
 	/**
 	 * The user
 	 * @var \Pmaechler\Workflow\Domain\Model\User
+	 * @ORM\ManyToOne(inversedBy="historyEntries")
 	 */
 	protected $user;
 
