@@ -1,0 +1,23 @@
+<f:layout name="Default" />
+
+<f:section name="Title">A list of step groups</f:section>
+
+<f:section name="Content">
+	<f:if condition="{stepGroups}">
+		<f:then>
+			<ul>
+				<f:for each="{stepGroups}" as="stepGroup">
+					<li>
+						<f:link.action action="show" arguments="{stepGroup: stepGroup}">{stepGroup.name}</f:link.action>
+						<f:link.action action="edit" arguments="{stepGroup: stepGroup}">Edit</f:link.action>
+						<f:link.action action="delete" arguments="{stepGroup: stepGroup}">Delete</f:link.action>
+					</li>
+				</f:for>
+			</ul>
+		</f:then>
+		<f:else>
+			<p>No step groups created yet.</p>
+		</f:else>
+	</f:if>
+	<p><f:link.action action="new">Create a new step group</f:link.action></p>
+</f:section>
