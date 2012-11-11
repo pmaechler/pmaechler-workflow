@@ -26,7 +26,8 @@ class TitleRepository extends \TYPO3\Flow\Persistence\Repository {
 		$arrAllTitles = array();
 		$arrAllTitles[0] = 'Please select ...';
 		foreach ($allTitles as $title) {
-			$arrAllTitles[] = $title->getName();
+			$titleIdentifier = $this->persistenceManager->getIdentifierByObject($title);
+			$arrAllTitles[$titleIdentifier] = $title->getName();
 		}
 
 		return $arrAllTitles;
