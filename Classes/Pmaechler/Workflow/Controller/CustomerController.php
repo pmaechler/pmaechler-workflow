@@ -25,6 +25,12 @@ class CustomerController extends BaseController {
 	protected $customerRepository;
 
 	/**
+	 * @Flow\Inject
+	 * @var \Pmaechler\Workflow\Domain\Repository\TitleRepository
+	 */
+	protected $titleRepository;
+
+	/**
 	 * Shows a list of customers
 	 *
 	 * @return void
@@ -49,6 +55,10 @@ class CustomerController extends BaseController {
 	 * @return void
 	 */
 	public function newAction() {
+		$this->view->assign(
+			'titles',
+			$this->titleRepository->findAllWithDefault()
+		);
 	}
 
 	/**

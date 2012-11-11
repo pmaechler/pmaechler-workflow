@@ -15,7 +15,22 @@ use TYPO3\Flow\Annotations as Flow;
  */
 class TitleRepository extends \TYPO3\Flow\Persistence\Repository {
 
-	// add customized methods here
+	/**
+	 * Returns an array with all titles and a default
+	 * value.
+	 *
+	 */
+	public function findAllWithDefault() {
+		$allTitles = $this->findAll();
+
+		$arrAllTitles = array();
+		$arrAllTitles[0] = 'Please select ...';
+		foreach ($allTitles as $title) {
+			$arrAllTitles[] = $title->getName();
+		}
+
+		return $arrAllTitles;
+	}
 
 }
 ?>
