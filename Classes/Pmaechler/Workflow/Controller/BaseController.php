@@ -98,13 +98,18 @@ class BaseController extends \TYPO3\Flow\Mvc\Controller\ActionController {
 				'invertIcon' => TRUE,
 				'items' => array(
 					array(
-						'label' => 'Create',
-						'href' => $this->uriBuilder->uriFor('new', array(), 'Customer'),
+						'label' => 'List',
+						'href' => $this->uriBuilder->uriFor('index', array(), 'Customer'),
 						'icon' => 'icon-list',
 					),
 					array(
 						'divider' => TRUE
-					)
+					),
+					array(
+						'label' => 'Create',
+						'href' => $this->uriBuilder->uriFor('new', array(), 'Customer'),
+						'icon' => 'icon-list',
+					),
 				)
 			);
 	}
