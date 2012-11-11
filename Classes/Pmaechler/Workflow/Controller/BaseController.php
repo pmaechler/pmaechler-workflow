@@ -56,6 +56,11 @@ class BaseController extends \TYPO3\Flow\Mvc\Controller\ActionController {
 			$this->view->assign('user', $this->account->getParty());
 		}
 
+		array_push(
+			$navigation,
+			$this->createCustomerNavigationEntries()
+		);
+
 		$this->view->assign('navigationItems', $navigation);
 	}
 
@@ -75,6 +80,32 @@ class BaseController extends \TYPO3\Flow\Mvc\Controller\ActionController {
 					'invertIcon' => TRUE,
 					'href' => $this->uriBuilder->uriFor('index', array(), 'Standard'),
 				),
+			);
+	}
+
+	/**
+	 * Creates the base entries for the customer navigation of the application.
+	 *
+	 * The configuration array is handed to the view, where the navigation viewhelper
+	 * builds the navigation out of it.
+	 */
+	protected function createCustomerNavigationEntries() {
+		return
+			array(
+				'id' => 'navCustomer',
+				'label' => 'Customer',
+				'icon' => ' icon-folder-open',
+				'invertIcon' => TRUE,
+				'items' => array(
+					array(
+						'label' => 'Create',
+						'href' => $this->uriBuilder->uriFor('new', array(), 'Customer'),
+						'icon' => 'icon-list',
+					),
+					array(
+						'divider' => TRUE
+					)
+				)
 			);
 	}
 }
