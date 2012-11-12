@@ -37,6 +37,12 @@ class CustomerController extends BaseController {
 	protected $quoteRepository;
 
 	/**
+	 * @Flow\Inject
+	 * @var \Pmaechler\Workflow\Domain\Repository\HistoryRepository
+	 */
+	protected $historyRepository;
+
+	/**
 	 * Shows a list of customers
 	 *
 	 * @return void
@@ -119,6 +125,15 @@ class CustomerController extends BaseController {
 		$this->customerRepository->remove($customer);
 		$this->addFlashMessage('Deleted a customer.');
 		$this->redirect('index');
+	}
+
+	/**
+	* Returns the history of the current customer
+	*
+	* @param \Pmaechler\Workflow\Domain\Model\Customer $customer
+	*/
+	public function getCustomerHistoryAction(\Pmaechler\Workflow\Domain\Model\Customer $customer) {
+		$this->view->assign('historyEntries', $customer->getHistoryEntries());
 	}
 
 }

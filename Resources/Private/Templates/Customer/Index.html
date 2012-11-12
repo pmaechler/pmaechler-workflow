@@ -28,6 +28,10 @@
 								<td>
 									<f:link.action action="edit" arguments="{customer: customer}">Edit</f:link.action>
 								</td>
+								<td class="showHistory">
+									<f:form.hidden class="customerIdentity" name="customerIdentity" value="{customer}" />
+									History
+								</td>
 								<td>
 									<f:link.action action="delete" arguments="{customer: customer}">Delete</f:link.action>
 								</td>

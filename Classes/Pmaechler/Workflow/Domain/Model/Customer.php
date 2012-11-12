@@ -451,5 +451,35 @@ class Customer {
 		$this->securityHash = $securityHash;
 	}
 
+	/**
+	 * Get the Customers's history entries
+	 *
+	 * @return \Pmaechler\Workflow\Domain\Model\History The Customers's history entries
+	 */
+	public function getHistoryEntries() {
+		return $this->historyEntries;
+	}
+
+	/**
+	 * Sets this Customers's history entries
+	 *
+	 * @param \Pmaechler\Workflow\Domain\Model\History The Customers's history entries
+	 * @return void
+	 */
+	public function setHistoryEntries($historyEntries) {
+		$this->historyEntries = $historyEntries;
+	}
+
+	/**
+	 * Adds an additional history entry to this customer
+	 *
+	 * @param \Pmaechler\Workflow\Domain\Model\History The history entry
+	 * @return void
+	 */
+	public function addHistoryEntry(\Pmaechler\Workflow\Domain\Model\History $historyEntry) {
+		$historyEntry->setCustomer($this);
+		$this->historyEntries->add($historyEntry);
+	}
+
 }
 ?>
