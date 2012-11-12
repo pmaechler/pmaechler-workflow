@@ -31,6 +31,12 @@ class CustomerController extends BaseController {
 	protected $titleRepository;
 
 	/**
+	 * @Flow\Inject
+	 * @var \Pmaechler\Workflow\Domain\Repository\QuoteRepository
+	 */
+	protected $quoteRepository;
+
+	/**
 	 * Shows a list of customers
 	 *
 	 * @return void
@@ -59,6 +65,10 @@ class CustomerController extends BaseController {
 			'titles',
 			$this->titleRepository->findAllWithDefault()
 		);
+		$this->view->assign(
+			'quotes',
+			$this->quoteRepository->findAllWithDefault()
+		);
 	}
 
 	/**
@@ -68,6 +78,10 @@ class CustomerController extends BaseController {
 	 * @return void
 	 */
 	public function createAction(Customer $newCustomer) {
+		$newCustomer->setStatus(1);
+		$newCustomer->setSecurityHash(
+			md5($newCustomer->getFirstname() . $newCustomer->getLastname() . $newCustomer->getCompany() . time())
+		);
 		$this->customerRepository->add($newCustomer);
 		$this->addFlashMessage('Created a new customer.');
 		$this->redirect('index');
