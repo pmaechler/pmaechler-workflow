@@ -139,7 +139,7 @@ class BaseController extends \TYPO3\Flow\Mvc\Controller\ActionController {
 					),
 					array(
 						'label' => 'Quotes',
-						'href' => $this->uriBuilder->uriFor('new', array(), 'Customer'),
+						'href' => $this->uriBuilder->uriFor('index', array(), 'Quote'),
 						'icon' => 'icon-list',
 					),
 				)
