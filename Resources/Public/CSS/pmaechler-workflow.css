@@ -1,3 +1,15 @@
 body {
 	padding-top: 50px;
 }
+
+#customer .tableCustomer {
+	width: 100%;
+}
+
+#customer .tableCustomer tr.even {
+	background-color: #C9DBFF;
+}
+
+#customer .tableCustomer tr.odd {
+	background-color: #F0F0F0;
+}

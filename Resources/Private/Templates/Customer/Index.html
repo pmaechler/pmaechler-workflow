@@ -3,21 +3,43 @@
 <f:section name="Title">A list of customers</f:section>
 
 <f:section name="Content">
-	<f:if condition="{customers}">
-		<f:then>
-			<ul>
-				<f:for each="{customers}" as="customer">
-					<li>
-						<f:link.action action="show" arguments="{customer: customer}">{customer.name}</f:link.action>
-						<f:link.action action="edit" arguments="{customer: customer}">Edit</f:link.action>
-						<f:link.action action="delete" arguments="{customer: customer}">Delete</f:link.action>
-					</li>
-				</f:for>
-			</ul>
-		</f:then>
-		<f:else>
-			<p>No customers created yet.</p>
-		</f:else>
-	</f:if>
+	<div id="customer">
+		<f:if condition="{customers}">
+			<f:then>
+				<table class="tableCustomer">
+					<f:for each="{customers}" as="customer">
+						<f:cycle values="{0: 'even', 1: 'odd'}" as="zebraClass">
+							<tr class="{zebraClass}">
+								<td>
+									{customer.firstname}
+								</td>
+								<td>
+									{customer.lastname}
+								</td>
+								<td>
+									{customer.address}
+								</td>
+								<td>
+									{customer.zip}
+								</td>
+								<td>
+									{customer.city}
+								</td>
+								<td>
+									<f:link.action action="edit" arguments="{customer: customer}">Edit</f:link.action>
+								</td>
+								<td>
+									<f:link.action action="delete" arguments="{customer: customer}">Delete</f:link.action>
+								</td>
+							</tr>
+						</f:cycle>
+					</f:for>
+				</table>
+			</f:then>
+			<f:else>
+				<p>No customers created yet.</p>
+			</f:else>
+		</f:if>
+	</div>
 	<p><f:link.action action="new">Create a new customer</f:link.action></p>
 </f:section>
